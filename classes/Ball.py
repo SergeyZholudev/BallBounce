@@ -8,7 +8,6 @@ class Ball:
         self.windowWidth = windowWidth
         self.windowHeight = windowHeight
         self.image = pygame.image.load("images/ball.png")
-
         
         # прямоугольник состоит из x и y
         ballRect = self.image.get_rect()
@@ -16,4 +15,4 @@ class Ball:
         self.ballHeight = ballRect.height()
         self.MaxWidth = self.windowWidth - self.ballWindth
         self.MaxWidth = self.windowHeight - self.ballHeight
-        
+
