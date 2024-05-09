@@ -7,14 +7,14 @@ class Ball:
         self.window = window
         self.windowWidth = windowWidth
         self.windowHeight = windowHeight
-        self.image = pygame.image.load("/images/ball.png")
+        self.image = pygame.image.load("images/ball.png")
         
         # прямоугольник состоит из x и y
         ballRect = self.image.get_rect()
-        self.ballWindth = ballRect.width()
-        self.ballHeight = ballRect.height()
+        self.ballWindth = ballRect.width
+        self.ballHeight = ballRect.height
         self.MaxWidth = self.windowWidth - self.ballWindth
-        self.MaxWidth = self.windowHeight - self.ballHeight
+        self.MaxHeight = self.windowHeight - self.ballHeight
 
         # выбираем произвольную начальную позицию
         self.x = random.randint(0, self.MaxWidth)
@@ -31,7 +31,7 @@ class Ball:
         if self.x < 0 or (self.x >= self.MaxWidth):
             self.speedX = -self.speedX
 
-        if self.x < 0 or (self.y >= self.MaxHeight):
+        if self.y < 0 or (self.y >= self.MaxHeight):
             self.speedY = -self.speedY
 
         # обновляем координату x и y
