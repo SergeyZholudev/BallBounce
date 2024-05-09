@@ -1,7 +1,6 @@
 # the Ball bounces in the window. By this we're testing OOP.
 
 import sys
-import random
 import pygame
 from pygame.locals import *
 from classes.Ball import *
