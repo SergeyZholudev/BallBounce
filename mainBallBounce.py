@@ -17,7 +17,7 @@ pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
 
-# создаём список состоящий из оъектов
+# создаём список состоящий из объектов
 ballList = []
 for i in range(N_BALLS):
     oBall = Ball(window, WINDOW_WIDTH, WINDOW_HEIGHT)
@@ -32,7 +32,7 @@ while True:
 
     # выполняем действия в рамках фрейма
 
-    #для кадждого мяча определяем координаты и движение
+    # для каждого мяча определяем координаты и движение
     for item in ballList:
         item.update()
 

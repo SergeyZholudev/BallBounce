@@ -1,19 +1,24 @@
 import pygame
-from pygame.locals import *
+from pathlib import Path
 import random
+
+
+# определяем константы
+BASE_PATH = str(Path(__file__).resolve().parent)
+
 
 class Ball:
     def __init__(self, window, windowWidth, windowHeight):
         self.window = window
         self.windowWidth = windowWidth
         self.windowHeight = windowHeight
-        self.image = pygame.image.load("images/ball.png")
+        self.image = pygame.image.load(BASE_PATH + '\\images\\ball.png')
         
         # прямоугольник состоит из x и y
         ballRect = self.image.get_rect()
-        self.ballWindth = ballRect.width
+        self.ballWidth = ballRect.width
         self.ballHeight = ballRect.height
-        self.MaxWidth = self.windowWidth - self.ballWindth
+        self.MaxWidth = self.windowWidth - self.ballWidth
         self.MaxHeight = self.windowHeight - self.ballHeight
 
         # выбираем произвольную начальную позицию
